@@ -1,0 +1,71 @@
+#!/bin/bash
+chmod +x ./file2
+
+#Please view this in Notepad with Format Text Wrap formatting. 
+
+echo "This is the output of the DATE ('date') command."$'\r' >> aprilDay.txt
+	date >> aprilDay.txt 
+	echo " " $'\r' >> aprilDay.txt
+	echo  "-------------------------------------------------------------"$'\r' >> aprilDay.txt
+	echo $'\r' " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the HOSTNAME ('hostname') command."$'\r' >> aprilDay.txt 
+	hostname >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "-------------------------------------------------------------"$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+
+echo "This is the output of the ARCH ('arch') command."$'\r' >> aprilDay.txt
+	arch >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "-------------------------------------------------------------"$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the UNAME -A ('uname -a') command."$'\r' >> aprilDay.txt
+	uname -a >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the UPTIME ('uptime') command."$'\r' >> aprilDay.txt
+	uptime >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the WHOAMI ('whoami') command."$'\r' >> aprilDay.txt
+	whoami >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the WHO ('who') command."$'\r' >> aprilDay.txt
+	who >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the FINGER ('finger') command."$'\r' >> aprilDay.txt
+	finger >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the W ('w') command."$'\r' >> aprilDay.txt
+	w >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the TOP ('top') command."$'\r' >> aprilDay.txt 
+	top -bn 1 2>&1> /tmp/topN >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+	echo "------------------------------------------------------------ "$'\r' >> aprilDay.txt
+	echo " "$'\r' >> aprilDay.txt
+
+echo "This is the output of the HISTORY ('history') command as modified to show the history because LINUX does not actually display the output of a history command from a bash script."$'\r' >> aprilDay.txt
+HISTFILE=~/.bash_history
+set -o history
+history | tail >> aprilDay.txt
+
